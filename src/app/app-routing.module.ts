@@ -13,8 +13,12 @@ const routes: Routes = [
     loadChildren: './pages/category/category.module#CategoryModule'
   },
   {
-    path: 'product',
-    loadChildren: './pages/product/product.module#ProductModule'
+    path: 'cart',
+    loadChildren: './pages/cart/cart.module#CartModule'
+  },
+  {
+    path: 'order',
+    loadChildren: './pages/order/order.module#OrderModule'
   }
 ];
 

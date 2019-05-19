@@ -1,3 +1,12 @@
-<p>
-  home works!
-</p>
+
+<div class="container p-4">
+  <div class="row">
+    <ng-container *ngFor="let product of topProducts">
+      <app-product [productData]="product" colWidth="col-md-2"></app-product>
+    </ng-container>
+  </div>
+</div>
+
+
+
+

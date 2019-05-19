@@ -1,3 +1,20 @@
-<p>
-  cart works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">Product</div>
+    <div class="col-md-5">Name</div>
+    <div class="col-md-2">Qty</div>
+    <div class="col-md-2">Price</div>
+  </div>
+  <div class="row" *ngFor="let item of items">
+      <div class="col-md-1"><a (click)="removeItem(item)">X</a></div>
+    <div class="col-md-2"><img class="img-thumbnail" src="{{item.img}}" alt=""></div>
+    <div class="col-md-5">{{item.name}}</div>
+    <div class="col-md-2"><input class="form-control" value="{{item.orderedQty}}" (keyup)="updateCart($event, item)" /></div>
+
+    <div class="col-md-2">{{item.price}}</div>
+  </div>
+
+  <div class="row">
+    <button (click)="goToCheckoutPage()">Checkout</button>
+  </div>
+</div>
